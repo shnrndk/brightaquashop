@@ -1,5 +1,5 @@
 <style>
-  .text-hide-me {
+  .card {
     display:inline-block;
     width:100%;
     white-space: nowrap;
