@@ -61,4 +61,4 @@
 
 
 </div>
-<a class="btn btn-primary" href="<?php echo site_url('/cart/payment/') ?>">Buy These Products</a>
+<a class="btn btn-primary" href="<?php echo site_url('/Paymentgateway/') ?>">Buy These Products</a>
