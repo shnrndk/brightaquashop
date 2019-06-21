@@ -13,42 +13,42 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label>Product Id</label>
-            <input type="text" class="form-control"  placeholder="Product Id" name="id" required>
+            <label>Model Number</label>
+            <input type="text" class="form-control"  placeholder="Model Number" name="Model_Number" required>
         </div>
     
     
         <div class="form-group col-md-6">
             <label>Product Name</label>
-            <input type="text" class="form-control"  placeholder="Product Name" name="product_name" required>
+            <input type="text" class="form-control"  placeholder="Product Name" name="Product_Name" required>
         </div>
   </div>
 
   <div class="form-row">
         <div class="form-group col-md-6">
             <label>Product Price</label>
-            <input type="number" class="form-control"  placeholder="Product Price" name="product_price" required>
+            <input type="number" class="form-control"  placeholder="Product Price" name="Product_Price" required>
         </div>
         <div class="form-group col-md-6">
           <label>Product Description</label>
-          <input type="text" class="form-control"  placeholder="Product Description" name="product_desc" required>
+          <input type="text" class="form-control"  placeholder="Product Description" name="Product_Desc" required>
         </div>
   </div>
 
 <div class="form-row">
         <div class="form-group col-md-3">
             <label>Quantity</label>
-            <input type="number" class="form-control" name="quantity" placeholder="Quantity" required>
+            <input type="number" class="form-control" name="Quantity" placeholder="Quantity" required>
         </div>
         
         <div class="form-group col-md-4">
             <label>Brand</label>
-            <input type="text" class="form-control"  placeholder="Product Brand"  name="brand" required>
+            <input type="text" class="form-control"  placeholder="Brand"  name="Brand" required>
         </div>
 
         <div class="form-group col-md-4">
             <label>Product Image</label>
-            <input type="text" class="form-control"  placeholder="Product Image"  name="product_img" required>
+            <input type="text" class="form-control"  placeholder="Product Image"  name="Product_Img" required>
         </div>
 
   </div>
