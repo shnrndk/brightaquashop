@@ -20,7 +20,7 @@ public function addproduct($data)
         $this->load->database();
         $filleddata = array(
             'Model_Number' => $data['Model_Number'],
-            'Product_Name' =>$data['Poduct_Name'],
+            'Product_Name' =>$data['Product_Name'],
             'Product_Price' => $data['Product_Price'],
             'Poduct_Desc' => $data['Product_Desc'],
             'Product_Img' => $data['Product_Img'],
