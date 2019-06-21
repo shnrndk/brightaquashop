@@ -22,7 +22,7 @@ public function addproduct($data)
             'Model_Number' => $data['Model_Number'],
             'Product_Name' =>$data['Product_Name'],
             'Product_Price' => $data['Product_Price'],
-            'Poduct_Desc' => $data['Product_Desc'],
+            'Product_Desc' => $data['Product_Desc'],
             'Product_Img' => $data['Product_Img'],
             'Quantity' => $data['Quantity'], 
             'Status' => $data['Status'],
