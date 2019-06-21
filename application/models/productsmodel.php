@@ -19,14 +19,14 @@ public function addprodcut($data)
 {
         $this->load->database();
         $filleddata = array(
-            'id' => $data['id'],
-            'product_name' =>$data['product_name'],
-            'product_price' => $data['product_price'],
-            'product_desc' => $data['product_desc'],
-            'product_img' => $data['product_img'],
-            'quantity' => $data['quantity'], 
-            'status' => $data['status'],
-            'brand' => $data['brand']
+            'Model_Number' => $data['Model_Number'],
+            'Product_Name' =>$data['Poduct_Name'],
+            'Product_Price' => $data['Product_Price'],
+            'Poduct_Desc' => $data['Product_Desc'],
+            'Product_Img' => $data['Product_Img'],
+            'Quantity' => $data['Quantity'], 
+            'Status' => $data['Status'],
+            'Brand' => $data['Brand']
         );
         $this->db->insert('producttable', $filleddata);
 }
