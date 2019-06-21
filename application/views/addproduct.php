@@ -5,6 +5,35 @@
     <meta charset="utf-8">
     <title>Add a New Product </title>
 
+    <script>
+        $(document).ready(function(e){
+            $(".dropdown-trigger").dropdown();
+
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true,
+                indicators: true
+            });
+
+            $(document).ready(function(){
+                $('.parallax').parallax()
+            });
+
+            $(document).ready(function(){
+                 $('.carousel').carousel();
+                 indicators:true;
+                 fullWidth:true;
+            });
+
+            $(document).ready(function(){
+                $('.materialboxed').materialbox();
+            });
+
+        
+        });
+
+        
+    </script>
+
     <ul id="dropdown1" class="dropdown-content ">    
         <li><a href="#!">one</a></li>
         <li><a href="#!">two</a></li>
