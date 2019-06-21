@@ -20,17 +20,17 @@ class Dashboard extends CI_Controller {
 			echo "";
 		}else{
 			$data = array(
-				'id' => $this->input->post('id'),
-				'product_name' => $this->input->post('product_name'),
-				'product_price' =>$this->input->post('product_price'),
-				'product_desc' => $this->input->post('product_desc'),
-				'product_img' =>$this->input->post('product_img'), 
-				'quantity' => $this->input->post('quantity'),
-				'status' => 1,
-				'brand'=> $this->input->post('brand'),
+				'Model_Number' => $this->input->post('Model_Number'),
+				'Product_Name' => $this->input->post('Product_Name'),
+				'Product_Price' =>$this->input->post('Product_Price'),
+				'Product_Desc' => $this->input->post('Product_Desc'),
+				'Product_Img' =>$this->input->post('Product_Img'), 
+				'Quantity' => $this->input->post('Quantity'),
+				'Status' => 1,
+				'Brand'=> $this->input->post('Brand'),
 			);
 	
-			$this->productsmodel->addprodcut($data);
+			$this->productsmodel->addproduct($data);
     }
     }
 
