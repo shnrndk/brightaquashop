@@ -15,7 +15,7 @@ public function viewdetbyid($id)
         return $query;
 }
 
-public function addprodcut($data)
+public function addproduct($data)
 {
         $this->load->database();
         $filleddata = array(
