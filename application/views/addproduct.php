@@ -4,6 +4,25 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="utf-8">
     <title>Add a New Product </title>
+
+    <div class="navbar-fixed">
+    <nav class="blue z-depth-3">
+        
+        <div class="nav-wrapper container blue ">
+        <a href="#!" class="brand-logo black-text text-darken-2">BrightAqua</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="<?php echo site_url('/') ?>" class="black-text text-darken-2">Home<i class="material-icons right">home</i></a></li>
+            <li><a href="<?php echo site_url('/contact') ?>" class="black-text text-darken-2">Contact Us<i class="material-icons right">call</i></a></li>
+            <!-- Dropdown Trigger -->
+            <li><a href="<?php echo base_url('/products') ?>" class="black-text text-darken-2">Products<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="<?php echo site_url('/cart') ?>" class="black-text text-darken-2">Cart<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="<?php echo site_url('/dashboard') ?>" class="black-text text-darken-2">Admin<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+        </div>
+    
+    </nav>
+</div>    
+
     <h1 style="font-size: 40px;text-align: center;">ENTER NEW PRODUCT DETAILS</h1>
 
 
