@@ -35,11 +35,9 @@ class Paymentgateway extends CI_Controller {
 	
 	public function view()
 	{
-		$this->load->helper('url');
-		$this->load->view('style');
 		$this->load->model('Paymentmodel');
 		$data['paymentdetails'] = $this->Paymentmodel->viewdata();
-		$this->load->view('viewdata',$data);
+		$this->load->view('orders',$data);
 		
 	}
 	
