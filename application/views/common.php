@@ -64,9 +64,9 @@
             <li><a href="<?php echo site_url('/') ?>" class="grey-text text-darken-2">Home<i class="material-icons right">home</i></a></li>
             <li><a href="<?php echo site_url('/contact') ?>" class="grey-text text-darken-2">Contact Us<i class="material-icons right">call</i></a></li>
             <!-- Dropdown Trigger -->
-            <li><a href="<?php echo base_url('/products') ?>" class="grey-text text-darken-2">Products<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a href="<?php echo site_url('/cart') ?>" class="grey-text text-darken-2">Cart<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a href="<?php echo site_url('/dashboard') ?>" class="grey-text text-darken-2">Admin<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="<?php echo base_url('/products') ?>" class="grey-text text-darken-2">Products<i class="material-icons right">explore</i></a></li>
+            <li><a href="<?php echo site_url('/cart') ?>" class="grey-text text-darken-2">Cart <?php echo count($this->cart->contents())?><i class="material-icons right">shopping_cart</i></a></li>
+            <li><a href="<?php echo site_url('/dashboard') ?>" class="grey-text text-darken-2">Admin<i class="material-icons right">perm_identity</i></a></li>
         </ul>
         </div>
     

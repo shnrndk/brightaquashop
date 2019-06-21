@@ -7,7 +7,7 @@ class Dashboard extends CI_Controller {
         $this->load->helper('url');
 		$this->load->view('commonwithoutparallax');
 		$this->load->view('dashboard');
-		$this->load->view('commonfooter');
+		//$this->load->view('commonfooter');
 	}
 
     public function addproduct(){
@@ -42,4 +42,12 @@ class Dashboard extends CI_Controller {
 		$this->load->view('productdatabaseview',$data);
     }
 	
+	public function viewproductgraph()
+	{
+		$this->load->model('Dashboardmodel');
+		$graphstats['graphdata'] = $this->Dashboardmodel->getgraphdata();
+		
+		$this->load->view('productquantitygraph',$graphstats);
+		
+	}
 }
