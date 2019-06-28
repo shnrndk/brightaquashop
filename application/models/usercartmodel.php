@@ -25,4 +25,34 @@ public function addprodcut($data)
         $this->db->insert('producttable', $filleddata);
 }
 
+public function insertusertemp($dataforcart)
+{
+        $this->load->database();
+        
+        $id= $dataforcart['id'];
+        $currentquantity = $this->db->query("SELECT quantity from usertemp WHERE id='$id'");
+        print_r($currentquantity);
+        /*
+        if($currentquantity==0)
+        {
+                $filleddata = array(
+                        'id' => $dataforcart['id'],
+                        'product_name' =>$dataforcart['product_name'],
+                        'product_price' => $dataforcart['product_price'],
+                        'product_desc' => $dataforcart['product_desc'],
+                        'product_img' => $dataforcart['product_img'],
+                        'quantity' => 1, 
+                        'status' => $dataforcart['status'],
+                        'brand' => $dataforcart['brand'],
+                        'customer_id' => $_SESSION['customer_id']
+                    );
+                    $this->db->insert('producttable', $filleddata);
+        }else{
+                $currentquantity=$currentquantity+1;
+                $this->db->query("UPDATE usertemp SET quantity=$currentquantity WHERE id=$id");
+        }
+        $this->db->insert('producttable', $filleddata);
+        */
+}
+
 }

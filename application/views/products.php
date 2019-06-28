@@ -61,7 +61,11 @@ foreach ($productdetails as $key => $value)
           </div>
           <div class='card-action'>
           <a href='";
+          if(isset($_SESSION['customer_id'])){
           echo site_url("cart/add/".$value["id"]);
+          }else{
+            echo site_url("Sign_in/");
+          }
           echo "'>Add to cart!</a>
         </div>
       </div>

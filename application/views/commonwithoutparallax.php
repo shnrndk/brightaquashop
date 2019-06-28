@@ -64,8 +64,53 @@
             <li><a href="<?php echo site_url('/') ?>" class="grey-text text-darken-2">Home<i class="material-icons right">home</i></a></li>
             <li><a href="<?php echo site_url('/contact') ?>" class="grey-text text-darken-2">Contact Us<i class="material-icons right">call</i></a></li>
             <li><a href="<?php echo base_url('/products') ?>" class="grey-text text-darken-2">Products<i class="material-icons right">explore</i></a></li>
-            <li><a href="<?php echo site_url('/cart') ?>" class="grey-text text-darken-2">Cart <?php echo count($this->cart->contents())?><i class="material-icons right">shopping_cart</i></a></li>
-            <li><a href="<?php echo site_url('/dashboard') ?>" class="grey-text text-darken-2">Admin<i class="material-icons right">perm_identity</i></a></li>
+            <li><a 
+            <?php if(!isset($_SESSION['customer_id'])) {
+                        echo "hidden"; 
+                    } 
+                
+             ?> href="<?php echo site_url('/cart') ?>" class="grey-text text-darken-2">Cart <?php echo count($this->cart->contents())?><i class="material-icons right">shopping_cart</i></a></li>
+            
+            <li><a 
+            <?php if(!isset($_SESSION['customer_id'])) {
+                        echo "hidden"; 
+                    } 
+                
+             ?> 
+            
+            href="<?php echo site_url('/dashboard') ?>" class="grey-text text-darken-2">Admin<i class="material-icons right">perm_identity</i></a></li>
+            
+            <?php if(!isset($_SESSION['customer_id'])) { ?>
+                        <li>
+                            <a  class="dropdown-trigger btn pink " data-target='dropdown2'><i
+                                    class="material-icons right">account_circle</i>
+
+                            </a>   
+                             <ul id='dropdown2' class='dropdown-content '>
+                                <li><a href="<?php echo base_url('/index.php/Sign_up'); ?>">Sign up</a></li>
+                                <li><a href="<?php echo base_url('/index.php/Sign_in'); ?>" >Log in</a></li>
+                                
+                            </ul>
+        
+                        </li>
+
+
+                    <?php }?> 
+
+                    <?php if(isset($_SESSION['customer_id'])) { ?>
+
+                        <li>
+                            <a href="<?php echo base_url('/index.php/logout'); ?>" class="waves-effect waves-light btn pink" >Log out
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="<?php echo base_url('/index.php/My_account'); ?>" class="waves-effect waves-light btn pink"><i
+                                    class="material-icons right">account_box</i>
+                            </a>
+                        </li>
+                        
+                    <?php }?> 
         </ul>
         </div>
     </nav>

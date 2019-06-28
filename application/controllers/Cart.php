@@ -28,9 +28,10 @@ class Cart extends CI_Controller {
             'product_price' => $row->product_price,
             'product_desc' => $row->product_desc,
             'product_img' => $row->product_img,
-            'quantity' => $row->quantity,
+            'quantity' => 1,
             'status' => 1,
-            'brand' => $row->brand
+            'brand' => $row->brand,
+            'customer_id' => $_SESSION['customer_id']
         );
         print_r($row->quantity);
 
@@ -40,19 +41,19 @@ class Cart extends CI_Controller {
             echo "Sorry, This product is not available Right Now!";
         }
 
-        $newquantityforcart = $row->quantity+1;
+        
 
         //Updating the database
         $this->db->set('quantity',$newquantity);
         $this->db->where('id', $row->id);
         $this->db->update('producttable');
-        //Updateing the cart database
+        //Updating the cart database
         $query = $this->db->get_where('usertemp', array('id' => $id));
         $row1 = $query->row();
-        //Checking the required ID is in the cart module .
-        if($row1){
+        if($row1->quantity){
+            $newquantityforcart = $row1->quantity+1;
             $this->db->set('quantity',$newquantityforcart);
-            $this->db->where('id', $row->id);
+            $this->db->where('id', $row1->id);
             $this->db->update('usertemp');
         }else{
             $this->db->insert('usertemp', $dataforcart);
@@ -60,9 +61,14 @@ class Cart extends CI_Controller {
 
 
         $this->cart->insert($data);
-        redirect(base_url('/products'),'refresh');
+        //redirect(base_url('/products'),'refresh');
 
     }
+
+
+
+
+    
 /*
     public function update()
     {   
