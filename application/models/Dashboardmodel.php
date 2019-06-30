@@ -8,8 +8,15 @@ public function getgraphdata()
         //print_r($query);
         //return $query;
         
-    
-       
 }
+
+public function getcustomerdetails()
+{
+        $this->load->database();
+        return  $this->db->query('SELECT * FROM register WHERE customer_id!=1')->result_array();
+        
+}
+
+
 
 }

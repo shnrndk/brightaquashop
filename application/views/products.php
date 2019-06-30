@@ -7,7 +7,7 @@
     overflow:hidden !important;
     text-overflow: ellipsis;
   }
-   /*
+   
   .card-content{
     font-weight: bold;
     font-size: 15px;
@@ -23,14 +23,14 @@
     font-size: 15px;
     align-content:center;
 
-  }
+  }/*
   #section {
     background-color: lightblue;
   }
   span{
     color: blue;
-  }
-*/
+  }*/
+
 </style>
 
 <div id="section">

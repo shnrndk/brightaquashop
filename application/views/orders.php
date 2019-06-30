@@ -3,11 +3,13 @@
 <table class="table table-hover table-bordered container" style="margin-top: 10px">
 <thead>
   <tr>
+    <th scope="col">Customer ID</th>
     <th scope="col">Order ID</th>
-    <th scope="col">Address 1</th>
-    <th scope="col">Address 2</th>
-    <th scope="col">Postal Id</th>
-    <th scope="col">Total Payment</th>
+    <th scope="col">Product ID</th>
+    <th scope="col">Product Name</th>
+    <th scope="col">Product Price</th>
+    <th scope="col">Product Quatity</th>
+    <th scope="col">Is Delivered</th>
   </tr>
 </thead>
 <tbody>
@@ -17,13 +19,13 @@
 
     
     foreach ($paymentdetails as $key => $value){
-        echo '<tr><td>'.$value['orderid'].'</td>
-        <td>'.$value['Address1'].'</td>
-        <td>'.$value['Address2'].'</td>
-        <td>'.$value['Postalid'].'</td>
-        <td>'.$value['Totalpayment'].'</td>';
-       
-        
+        echo '<tr><td>'.$value['customer_id'].'</td>
+        <td>'.$value['orderid'].'</td>
+        <td>'.$value['id'].'</td>
+        <td>'.$value['product_name'].'</td>
+        <td>'.$value['product_price'].'</td>
+        <td>'.$value['quantity'].'</td>
+        <td><input type="checkbox" value="'.$value['isdelivered'].'"</td>';
     }
 
 ?>

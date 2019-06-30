@@ -27,19 +27,29 @@ class Paymentgateway extends CI_Controller {
 	
 			$this->Paymentmodel->insertdata($data);
 			//redirect(site_url('/cart/payment'),'refresh');
+			$this->Paymentmodel->updateproducttable();
             };
-		
+			
+
 	
 	}
 
 	
-	public function view()
+	public function viewpayments()
 	{
 		$this->load->model('Paymentmodel');
-		$data['paymentdetails'] = $this->Paymentmodel->viewdata();
-		$this->load->view('orders',$data);
+		$data['paymentdetails'] = $this->Paymentmodel->viewpayments();
+		$this->load->view('payments',$data);
 		
 	}
+
+	public function vieworders()
+	{
+		$this->load->model('Paymentmodel');
+		$data['paymentdetails'] = $this->Paymentmodel->vieworders();
+		$this->load->view('orders',$data);
+	}
+
 	
 	public function delete($id)
 	{	

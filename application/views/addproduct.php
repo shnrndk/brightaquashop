@@ -9,6 +9,7 @@
 
 </head>
 <body>    
+<div id="container">
     <form method="POST" style="margin: 40px 30px;padding: 10px;">
 
     <div class="form-row">
@@ -61,7 +62,7 @@
 
     </form>
 
-
+</div>
     
 </body>
 </html>

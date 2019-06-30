@@ -33,20 +33,14 @@ class Cart extends CI_Controller {
             'brand' => $row->brand,
             'customer_id' => $_SESSION['customer_id']
         );
-        print_r($row->quantity);
+        //print_r($row->quantity);
 
         if($row->quantity-1>0){
-            $newquantity=$row->quantity-1;
+            
         }else{
             echo "Sorry, This product is not available Right Now!";
         }
 
-        
-
-        //Updating the database
-        $this->db->set('quantity',$newquantity);
-        $this->db->where('id', $row->id);
-        $this->db->update('producttable');
         //Updating the cart database
         $query = $this->db->get_where('usertemp', array('id' => $id));
         $row1 = $query->row();
@@ -61,7 +55,7 @@ class Cart extends CI_Controller {
 
 
         $this->cart->insert($data);
-        //redirect(base_url('/products'),'refresh');
+        redirect(base_url('/products'),'refresh');
 
     }
 

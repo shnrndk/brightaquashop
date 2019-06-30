@@ -86,8 +86,11 @@
                 
 
                      
-            <?php if(!isset($_SESSION['customer_id'])) { ?>
-                        <li>
+            
+                        <li 
+                        <?php if(isset($_SESSION['customer_id'])) { 
+                            echo "hidden";
+                            }?>>
                             <a  class="dropdown-trigger btn pink " data-target='dropdown2'><i
                                     class="material-icons right">account_circle</i>
 
@@ -101,7 +104,7 @@
                         </li>
 
 
-                    <?php }?> 
+                    
 
                     <?php if(isset($_SESSION['customer_id'])) { ?>
 

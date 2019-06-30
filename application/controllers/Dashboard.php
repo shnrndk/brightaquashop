@@ -50,4 +50,11 @@ class Dashboard extends CI_Controller {
 		$this->load->view('productquantitygraph',$graphstats);
 		
 	}
+
+	public function viewcustomers()
+	{
+		$this->load->model('Dashboardmodel');
+		$data['customerdetails'] = $this->Dashboardmodel->getcustomerdetails();
+		$this->load->view('customerdetails',$data);
+	}
 }
