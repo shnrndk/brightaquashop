@@ -14,7 +14,7 @@
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 
     <title>BrightAqua</title>
     
@@ -68,14 +68,22 @@
             <li><a 
             <?php if(!isset($_SESSION['customer_id'])) {
                         echo "hidden"; 
-                    } 
+                    }else{
+                        if($_SESSION['customer_id']==1){
+                            echo "hidden";
+                        }
+                    }
                 
              ?> href="<?php echo site_url('/cart') ?>" class="grey-text text-darken-2">Cart <?php echo count($this->cart->contents())?><i class="material-icons right">shopping_cart</i></a></li>
             
             <li><a 
             <?php if(!isset($_SESSION['customer_id'])) {
                         echo "hidden"; 
-                    } 
+                    }else{
+                        if($_SESSION['customer_id']!=1){
+                            echo "hidden";
+                        }
+                    }
                 
              ?> 
             
@@ -83,9 +91,6 @@
             
             
         
-                
-
-                     
             
                         <li 
                         <?php if(isset($_SESSION['customer_id'])) { 

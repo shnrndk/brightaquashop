@@ -15,7 +15,6 @@
   }
   .card-action{
     font-size: 25px;
-    background-color: red;
     color: salmon;
     align-content: center;
   }
@@ -51,7 +50,7 @@ foreach ($productdetails as $key => $value)
           echo $value['product_name'];
           echo"</span>";
           echo "</div>
-          <div class='card-cont'>";
+          <div class='card-cont'><br>";
           echo $value["product_desc"];
           echo" </p>
           </div>

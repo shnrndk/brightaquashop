@@ -37,5 +37,12 @@ class Home extends CI_Controller {
 		$this->load->view('products',$details);
 		$this->load->view('commonfooter');*/
 	}
+	public function gallery()
+	{
+		$this->load->helper('url');
+		$this->load->view('commonwithoutparallax');
+		$this->load->view('gallery');
+		
+	}
 	
 }
