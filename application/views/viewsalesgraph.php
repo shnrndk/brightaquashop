@@ -5,14 +5,14 @@
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ["Product ID", "Quantity"],
+        ["Order ID", "Payments"],
         <?php
         
-          foreach ($graphdata as $key => $value){
+          foreach ($paymentdetails as $key => $value){
             echo '["';
-            echo $value['id'];
+            echo $value['orderid'];
             echo '",';
-            echo $value['quantity'];
+            echo $value['Totalpayment'];
             echo '],';
           }
           
@@ -40,7 +40,7 @@
       view.setColumns([0, 1]);
 
       var options = {
-        title: "Product Inventory Level",
+        title: "Payments Summary Graph",
         width: 1600,
         height: 800,
         bar: {groupWidth: "60%"},

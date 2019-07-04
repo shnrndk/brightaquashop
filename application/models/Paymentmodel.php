@@ -31,8 +31,6 @@ class Paymentmodel extends CI_Model {
         return $query->result_array();
     }
 
-
-
     public function deleterecord($id)
     {   
         $this->load->database();

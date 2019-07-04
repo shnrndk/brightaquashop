@@ -42,13 +42,20 @@ class Dashboard extends CI_Controller {
 		$this->load->view('productdatabaseview',$data);
     }
 	
-	public function viewproductgraph()
+
+
+	public function viewsalesgraph()
 	{
 		$this->load->model('Dashboardmodel');
 		$graphstats['graphdata'] = $this->Dashboardmodel->getgraphdata();
-		
 		$this->load->view('productquantitygraph',$graphstats);
-		
+	}
+
+	public function viewordersgraph()
+	{
+		$this->load->model('Paymentmodel');
+		$data['paymentdetails'] = $this->Paymentmodel->viewpayments();
+		$this->load->view('viewsalesgraph',$data);
 	}
 
 	public function viewcustomers()
@@ -57,4 +64,6 @@ class Dashboard extends CI_Controller {
 		$data['customerdetails'] = $this->Dashboardmodel->getcustomerdetails();
 		$this->load->view('customerdetails',$data);
 	}
+
+	
 }

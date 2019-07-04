@@ -25,7 +25,7 @@
         <a href="<?php echo site_url('/Dashboard/viewproductgraph/') ?>"class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>View Inventory Summary Graph</a>
         </div>
         <div class='col'  style="margin-top:50px; margin-bottom:50px">
-        <a href="<?php echo site_url('/Dashboard/viewproductgraph/') ?>"class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>View Sales Graph</a>
+        <a href="<?php echo site_url('/Dashboard/viewordersgraph/') ?>"class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>View Sales Graph</a>
         </div>
     </div>
 </div>

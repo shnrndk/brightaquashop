@@ -6,6 +6,7 @@
     white-space: nowrap;
     overflow:hidden !important;
     text-overflow: ellipsis;
+    border-radius:20px;
   }
    
   .card-content{

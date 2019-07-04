@@ -35,12 +35,12 @@
                 <img src="<?php echo base_url('images/shopping-cart.png');?>" height="100" width="100">
                 </div>
                         <blockquote>
-                            <h5>select any item and shooping with us online with fast delivery service</h5>  
+                            <h5>select any item and shoping with us online with fast delivery service</h5>  
                         </blockquote>
                     </div>
           
               </div>
-                
+                <br><br>
               
               </div>
               <div style="height:400px"class="parallax-container">
