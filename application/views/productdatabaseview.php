@@ -25,8 +25,8 @@
         <td>'.$value['product_desc'].'</td>
         <td>'.$value['quantity'].'</td>
         <td>'.$value['brand']."</td>
-        <td><a class='btn btn-danger' role='button' href='/CRUDAssignment/index.php/Payementgateway/delete/".$value['id']."'>Delete</a>
-        <a class='btn btn-warning' role='button' href='/CRUDAssignment/index.php/Payementgateway/passtoupdateform/".$value['id']."'>Update</a></td>
+        <td><a class='btn btn-danger' role='button' href='/cishop/index.php/Dashboard/delete/".$value['id']."'>Delete</a>
+        <a class='btn btn-warning' role='button' href='/cishop/index.php/Dashboard/passtoupdateform/".$value['id']."'>Update</a></td>
         </td></tr>";
        
         

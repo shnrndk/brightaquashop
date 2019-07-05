@@ -4,7 +4,7 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Welcome to Shopping Cart</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <p class="lead"></p>
   </div>
 </div>
 <table class='table table-hover' cellpadding="6" cellspacing="1" style="width:100%" border="0">

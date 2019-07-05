@@ -17,9 +17,10 @@ class Sign_in extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('form');
-		$this->load->view('common');
+		//$this->load->view('common');
+		$this->load->view('commonwithoutparallax');
 		$this->load->view('signin');
-		$this->load->view('commonfooter');
+		//$this->load->view('commonfooter');
 	}
 
 	public function validation(){

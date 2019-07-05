@@ -65,5 +65,52 @@ class Dashboard extends CI_Controller {
 		$this->load->view('customerdetails',$data);
 	}
 
+	public function delete($id)
+	{	
+		$this->load->helper('url');
+		$this->load->model('productsmodel');
+		$isrun = $this->productsmodel->deleterecord($id);
+		if($isrun){
+			echo "$id is deleted successfully";
+			redirect(site_url('Dashboard/productdatabaseview/'));
+		}
+	}
+
+	public function passtoupdateform($id)
+	{
+		$this->load->helper('url');
+		$this->load->model('productsmodel');
+		$data['productdetails'] = $this->productsmodel->updateformview($id);
+		$this->load->view('updateform',$data);
+
+		if(!isset($_POST['id'])){
+			
+		}else{
+		$details = array(
+				'id' => $this->input->post('id'),
+				'product_name' => $this->input->post('product_name'),
+				'product_price' =>$this->input->post('product_price'),
+				'product_desc' => $this->input->post('product_desc'),
+				'product_img' =>$this->input->post('product_img'), 
+				'quantity' => $this->input->post('quantity'),
+				'status' => 1,
+				'brand'=> $this->input->post('brand'));
+			print_r($details);
+			
+			$result = $this->productsmodel->update($details);
+			if($result){
+				echo "Updated Successfully";
+				redirect(site_url('Dashboard/productdatabaseview/'));
+			}else{
+				echo "Error";
+				redirect(site_url('Dashboard/productdatabaseview/'));
+			}
+			
+		}
+			
+
+	}
+
+	
 	
 }

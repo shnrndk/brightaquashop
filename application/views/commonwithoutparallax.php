@@ -56,20 +56,20 @@
     </ul>
     
     <div class="navbar-fixed">
-    <nav class="white z-depth-3">
+    <nav class="grey darken-4 z-depth-3">
         
-        <div class="nav-wrapper container white ">
-        <a href="#!" class="brand-logo grey-text text-darken-2">BrightAqua</a>
+        <div class="nav-wrapper container grey darken-4 ">
+        <a href="#!" class="brand-logo grey-text text-lighten-2">BrightAqua</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="<?php echo site_url('/') ?>" class="grey-text text-darken-2">Home<i class="material-icons right">home</i></a></li>
-            <li><a href="<?php echo site_url('/contact') ?>" class="grey-text text-darken-2">Contact Us<i class="material-icons right">call</i></a></li>
-            <li><a href="<?php echo base_url('/products') ?>" class="grey-text text-darken-2">Products<i class="material-icons right">explore</i></a></li>
+            <li><a href="<?php echo site_url('/') ?>" class="grey-text text-lighten-2">Home<i class="material-icons right">home</i></a></li>
+            <li><a href="<?php echo site_url('/contact') ?>" class="grey-text text-lighten-2">Contact Us<i class="material-icons right">call</i></a></li>
+            <li><a href="<?php echo base_url('/products') ?>" class="grey-text text-lighten-2">Products<i class="material-icons right">explore</i></a></li>
             <li><a 
             <?php if(!isset($_SESSION['customer_id'])) {
                         echo "hidden"; 
                     } 
                 
-             ?> href="<?php echo site_url('/cart') ?>" class="grey-text text-darken-2">Cart <?php echo count($this->cart->contents())?><i class="material-icons right">shopping_cart</i></a></li>
+             ?> href="<?php echo site_url('/cart') ?>" class="grey-text text-lighten-2">Cart <?php echo count($this->cart->contents())?><i class="material-icons right">shopping_cart</i></a></li>
             
             <li><a 
             <?php if(!isset($_SESSION['customer_id'])) {
@@ -78,7 +78,7 @@
                 
              ?> 
             
-            href="<?php echo site_url('/dashboard') ?>" class="grey-text text-darken-2">Admin<i class="material-icons right">perm_identity</i></a></li>
+            href="<?php echo site_url('/dashboard') ?>" class="grey-text text-lighten-2">Admin<i class="material-icons right">perm_identity</i></a></li>
             
             <?php if(!isset($_SESSION['customer_id'])) { ?>
                         <li>
