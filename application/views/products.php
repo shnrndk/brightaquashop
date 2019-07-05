@@ -60,7 +60,7 @@ foreach ($productdetails as $key => $value)
           echo" </p>
           </div>";
 
-          echo '<a href="'.site_url("Review/viewreviews/".$value['id']).'">View Reviews</a>';
+          echo '<a href="'.site_url("Review/viewreviews/".$value['id']).'" style="margin-left: 60px"">View Reviews</a>';
 
         
           echo"<div class='card-action'>
