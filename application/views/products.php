@@ -58,8 +58,12 @@ foreach ($productdetails as $key => $value)
           <div class='card-content'>";
           echo "RS ".$value["product_price"]."/=";
           echo" </p>
-          </div>
-          <div class='card-action'>
+          </div>";
+
+          echo '<a href="'.site_url("Review/viewreviews/".$value['id']).'">View Reviews</a>';
+
+        
+          echo"<div class='card-action'>
           <a href='";
           if(isset($_SESSION['customer_id'])){
           echo site_url("cart/add/".$value["id"]);
