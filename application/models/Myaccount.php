@@ -39,8 +39,10 @@
 
         public function delete_entry(){
             $this->load->database('default');
-            $this->db->where('costomer_id', $_SESSION['customer_id'] );
+            $this->db->where('customer_id', $_SESSION['customer_id'] );
             $this->db->delete('register');
+
+            unset($_SESSION['customer_id']);
         }
 
     }

@@ -10,9 +10,12 @@
 <?php
 
 
-
+$i=0;
 foreach($reviewdetails as $prodid){
+    if($i==0){
     echo "<h1>Reviews About ".$prodid['id']."</h1>";
+    }
+    $i=$i+1;
 }  
 
 foreach($reviewdetails as $review){

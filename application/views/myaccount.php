@@ -37,8 +37,10 @@
                 </form>
 
                 <div> If you want to delete your account
-                     <button type="button" href="<?php echo base_url('My_account/delete')?>" class="waves-effect waves-darken-4 red btn" >Delete Account</button> </div>
+                    <a href="<?php echo base_url('My_account/delete')?>">Delete</a>
+                     
 
             </div>
         </div>
+</div>
 </div>

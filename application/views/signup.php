@@ -32,7 +32,7 @@
                 <hr>
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
-                <button  class="btn waves-effect waves-light" type="submit" class="registerbtn">Sign in</button>
+                <button  class="btn waves-effect waves-light" type="submit" class="registerbtn">Sign Up</button>
             </div>
             
             <div class="container signin">
