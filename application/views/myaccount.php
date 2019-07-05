@@ -1,9 +1,9 @@
-
+<div class ="container">
      <div class="row">
         <div class="col-md-12">
-            <h3>
+            <h4>
                 Edit your profile
-            </h3>
+            </h4>
             <?php echo form_open('My_account/validation'); ?>
 
 
@@ -30,13 +30,15 @@
 
           
                 <br>
-                <input type="hidden" name="Email" value = "<?php echo $Email;?>" >
+                <input type="hidden" name="email" value = "<?php echo $email;?>" >
                 <button class="btn waves-effect waves-light" type="submit" name="action" class="loginbtn">Update</button>
-                <button type="submit" class="btn btn-primary">Update</button>
+                
                 <br>
-                <div> If you want to delete your account
-                     <button type="button" href="<?php echo base_url('/')?>" class="waves-effect waves-darken-4 red btn" >Delete Account</button> </div>
                 </form>
+
+                <div> If you want to delete your account
+                     <button type="button" href="<?php echo base_url('My_account/delete')?>" class="waves-effect waves-darken-4 red btn" >Delete Account</button> </div>
+
             </div>
         </div>
 </div>

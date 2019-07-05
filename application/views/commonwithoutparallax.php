@@ -67,14 +67,22 @@
             <li><a 
             <?php if(!isset($_SESSION['customer_id'])) {
                         echo "hidden"; 
-                    } 
+                    }else{
+                        if($_SESSION['customer_id']==1){
+                            echo "hidden";
+                        }
+                    }
                 
              ?> href="<?php echo site_url('/cart') ?>" class="grey-text text-lighten-2">Cart <?php echo count($this->cart->contents())?><i class="material-icons right">shopping_cart</i></a></li>
             
             <li><a 
             <?php if(!isset($_SESSION['customer_id'])) {
                         echo "hidden"; 
-                    } 
+                    }else{
+                        if($_SESSION['customer_id']!=1){
+                            echo "hidden";
+                        }
+                    }
                 
              ?> 
             

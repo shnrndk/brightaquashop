@@ -73,6 +73,13 @@ class Dashboard extends CI_Controller {
 		$data['customerdetails'] = $this->Dashboardmodel->getcustomerdetails();
 		$this->load->view('customerdetails',$data);
 	}
+	
+	public function viewcarts()
+	{
+		$this->load->model('Dashboardmodel');
+		$data['cartdetails'] = $this->Dashboardmodel->getcarts();
+		$this->load->view('cartdetails',$data);
+	}
 
 	public function delete($id)
 	{	
